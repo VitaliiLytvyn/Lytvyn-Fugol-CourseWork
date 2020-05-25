@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DAL.Context">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <AssociationLine Name="Tours" Type="DAL.Models.Tour" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.812" Y="3.733" />
+        <Point X="1.812" Y="5.5" />
+        <Point X="3.75" Y="5.5" />
+        <Point X="3.75" Y="5.879" />
+        <Point X="4" Y="5.879" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Cities" Type="DAL.Models.City" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="3.505" />
+        <Point X="2.375" Y="3.505" />
+        <Point X="2.375" Y="4.312" />
+        <Point X="6" Y="4.312" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Context.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Users" />
+      <Property Name="Tours" />
+      <Property Name="Cities" />
+      <Property Name="Hotels" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DAL.ContextRepository&lt;TEntity&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAgAAAABAAAAABAAAAAABAEAAAAAAAAAgAAI=</HashCode>
+      <FileName>ContextRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Context" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DAL.UnitOfWork" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="2.5" Width="1.5" />
+    <AssociationLine Name="Cities" Type="DAL.ContextRepository&lt;TEntity&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="9.25" Y="2.5" />
+        <Point X="9.25" Y="2.25" />
+        <Point X="5.75" Y="2.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Hotels" Type="DAL.ContextRepository&lt;TEntity&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.5" Y="3.47" />
+        <Point X="5.25" Y="3.47" />
+        <Point X="5.25" Y="2.312" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAACAOAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAECAAA=</HashCode>
+      <FileName>UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="context" />
+      <Property Name="Cities" />
+      <Property Name="Hotels" />
+      <Property Name="Tours" />
+      <Property Name="Users" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DAL.Models.City">
+    <Position X="6" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Models\City.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Models.Tour">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAgAAAAAAAAABQAAAAAAAAAAAQEAAAAAAA=</HashCode>
+      <FileName>Models\Tour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Models.User">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAEAAAAAwABAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Models.Hotel">
+    <Position X="2" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAABAAAAAAAIAAAAAAQAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Models\Hotel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DAL.IGenericRepository&lt;TEntity&gt;" Collapsed="true">
+    <Position X="8.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAABAAAAAABAEAAAAAAAAAgAAA=</HashCode>
+      <FileName>IGenericRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DAL.IUnitOfWork" Collapsed="true">
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAOAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>IUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
